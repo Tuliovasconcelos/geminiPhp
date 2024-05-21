@@ -16,7 +16,7 @@ class GeminiPhp
         $this->url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=" . $apiKey;
     }
 
-    public function setRequestData($question)
+    public function setRequestData($question, $temperature = 1, $topK = 0, $topP = 0.95, $maxOutputTokens = 8192)
     {
         $this->requestData = [
             "contents" => [
@@ -30,10 +30,10 @@ class GeminiPhp
                 ]
             ],
             "generationConfig" => [
-                "temperature" => 1,
-                "topK" => 0,
-                "topP" => 0.95,
-                "maxOutputTokens" => 8192,
+                "temperature" => $temperature,
+                "topK" => $topK,
+                "topP" => $topP,
+                "maxOutputTokens" => $maxOutputTokens,
                 "stopSequences" => []
             ],
             "safetySettings" => [
