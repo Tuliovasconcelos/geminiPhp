@@ -1,6 +1,6 @@
-# GeminiAPI
+# GeminiPhp
 
-GeminiAPI é uma biblioteca PHP para integração com a API de geração de linguagem da Gemini. Esta biblioteca permite que você envie solicitações para a API Gemini e receba respostas automatizadas para diversas perguntas e contextos.
+GeminiPhp é uma biblioteca PHP para integração com I.A do google. Esta biblioteca permite que você envie solicitações para a API Gemini e receba respostas automatizadas para diversas perguntas e contextos.
 
 ## Instalação
 
@@ -16,17 +16,17 @@ composer require tuliovasconcelos/geminiphp
 
 require 'vendor/autoload.php';
 
-use GeminiAPI\GeminiAPI;
+use GeminiPhp\GeminiPhp;
 
 // Instanciar a biblioteca
-$apiKey = "Sua-API-Key";
+$PhpKey = "Sua-API-Key";
 $systemInstruction = "Responda de forma clara e concisa com conceitos do PHP.";
 $question = "Como criar uma I.A?";
 
 try {
-    $geminiAPI = new GeminiAPI($apiKey, $systemInstruction);
-    $geminiAPI->setRequestData($question, 0.7, 50, 0.9, 2048);
-    $response = $geminiAPI->sendRequest();
+    $geminiPhp = new GeminiPhp($PhpKey, $systemInstruction);
+    $geminiPhp->setRequestData($question, 0.7, 50, 0.9, 2048);
+    $response = $geminiPhp->sendRequest();
 
     echo $response;
 } catch (Exception $e) {
