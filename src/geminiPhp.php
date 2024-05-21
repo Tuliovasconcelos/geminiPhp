@@ -1,8 +1,8 @@
 <?php
 
-namespace HealthPlanAPI;
+namespace GeminiPhp;
 
-class HealthPlanAPI
+class GeminiPhp
 {
     private $apiKey;
     private $systemInstruction;
